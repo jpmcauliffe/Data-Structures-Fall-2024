@@ -1,0 +1,12 @@
+I'll start with InsertRandomSpeedTest. With strings of length 10,
+ULLMap only takes 0.01 seconds when there are 1000 items but can't
+even run when there are 100000 items. Our HashMap on the other hand,
+can do 100000 items in 0.08 seconds. Java's HashMap only takes 0.04 tho...
+At a million items, we take 0.64 and Java takes 0.31
+At 10 million, we now take 8.83 seconds, not linear, but close.
+
+With InsertInOrderSpeedTest, ULLMap can do 10000 items, although not 100000.
+Our map does it in a tenth of a second, java in one hundreth.
+For one million items, we are just over half a second; java under four tenths.
+At 10 million, we are near 5 seconds (linear) and java is near 4 (linear)
+At 100 million, we take too much memory.
